@@ -10,19 +10,18 @@ import 'web_view_stack.dart';
 void main() {
   runApp(
       const MaterialApp(
-        home:WebViewApp(),
+        home:PioneerPartyApp(),
       )
   );
 }
 
-class WebViewApp extends StatefulWidget {
-  const WebViewApp({super.key});
-
+class PioneerPartyApp extends StatefulWidget {
+  const PioneerPartyApp({super.key});
   @override
-  State<WebViewApp> createState() => _WebViewAppState();
+  State<PioneerPartyApp> createState() => _PioneerPartyAppState();
 }
 
-class _WebViewAppState extends State<WebViewApp> {
+class _PioneerPartyAppState extends State<PioneerPartyApp> {
   final controller = Completer<WebViewController>();
 
   int _currentIndex = 0;
@@ -37,9 +36,6 @@ class _WebViewAppState extends State<WebViewApp> {
         ],
         backgroundColor: const Color(0xff00427c),
         centerTitle: true,
-        //actions: [
-        //  NavigationControls(controller: controller),
-        //],
       ),
       body: WebViewStack(controller: controller),
       bottomNavigationBar: BottomNavigationBar(
